@@ -15,6 +15,7 @@ app.use('/api/users', users);
 app.use(express.static(path.join(__dirname, '../build')))
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../build'))
+    console.log(`A new request was made.`)
 })
 //-----
 const port = process.env.PORT || 5000;
